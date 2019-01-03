@@ -11,8 +11,8 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "Servlet",urlPatterns = "/allOrder")
-public class Servlet extends HttpServlet {
+@WebServlet(name = "AllOrderWelcomeController",urlPatterns = "/allOrder")
+public class AllOrderWelcomeController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
