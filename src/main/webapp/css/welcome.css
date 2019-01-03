@@ -56,3 +56,8 @@ a.buttonw1 {
 a.buttonw1:hover { background: rgb(244, 80, 66); }
 a.buttonw1:active { background: white; }
 
+a.sulka:hover {
+    transition: all 0.5s;
+    background: rgb(244, 80, 66);;
+    color: black;
+}

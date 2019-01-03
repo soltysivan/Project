@@ -16,6 +16,12 @@
 
 <html >
 <head>
+    <%HttpSession httpSession = request.getSession();
+        User user = (User) httpSession.getAttribute("user");
+
+        if (user == null){
+            response.sendRedirect("/login");
+        }%>
     <style><%@include file="/css/mainstyles.css"%></style>
     <style><%@include file="/css/welcome.css"%></style>
     <title>Order</title>
