@@ -1,0 +1,60 @@
+body{
+	background: url(../img/fon_lenty_radiaciya_opasnost_stena_18526_1920x1080.jpg)no-repeat center top/cover;
+}
+.welcometitle{
+	font-size: 50px;
+	text-align: center;
+	color: #FFFFFF;
+}
+.sulka{
+	margin-top: 50px;
+	font-size: 30px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+table{
+	font-family: Arial, sans-serif;
+	margin: 0 auto;
+	text-align: center;
+	border-collapse: separate;
+	border-spacing: 10px;
+	background: #ece9e0;
+	border: 16px solid #ece9e0;
+	border-radius: 20px;
+	margin-bottom: 50px;
+
+}
+th{
+	font-size: 40px;
+	padding: 20px;
+	background: #464646;
+	color: #FFFFFF;
+}
+td{
+	font-size: 25px;
+	padding: 20px;
+	background: #ffb60d;
+}
+buttonwelcome{
+	margin-top: 50px;
+
+}
+a.buttonw1 {
+	background: #ffb302;
+	float: right;
+	margin-right: 30px;
+	display: inline-block;
+	color: white;
+	font-weight: 700;
+	text-decoration: none;
+	user-select: none;
+	padding: .5em 2em;
+	outline: none;
+	border: 2px solid;
+	border-radius: 1px;
+	transition: 0.2s;
+}
+
+a.buttonw1:hover { background: rgba(255,255,255,.2); }
+a.buttonw1:active { background: white; }
+

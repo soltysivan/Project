@@ -1,0 +1,170 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+.clearfix {
+	content: '';
+	display: table;
+	width: 100%;
+	clear: both;
+}
+div {
+	box-sizing: border-box;
+}
+.headerMain{
+	background: url(../img/android-wallpaper-city-dark-248159.jpg)no-repeat center top/cover;
+	padding-bottom: 200px;
+}
+.container{
+	width: 950px;
+	margin: 0 auto;
+}
+.logo{
+	margin-top: 20px;
+	float: left;
+}
+nav{
+	float: right;
+	margin-top: 50px;
+}
+.menu{
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+.menu li{
+	float: left;
+	display: block;
+	margin-right: 40px;
+}
+.menu li a{
+	color: #FFFFFF;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
+}
+.title_first{
+	font-size: 40px;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 150px;
+}
+.indextitle{
+	font-size: 75px;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 15px;
+}
+
+.button{
+	background: #FFD700	;
+	color: #000000;
+	border-radius: 3px;
+	display: block;
+	width: 240px;
+	padding: 20px 0;
+	margin: 0 auto;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
+	margin-top: 100px;
+}
+.title{
+	padding-top: 120px;
+
+}
+.title h2{
+font-size: 40px;
+font-weight: bold;
+text-align: center;
+text-transform: uppercase;
+margin: 0;
+}
+.titlecar{
+	padding-top: 120px;
+
+}
+.titlecar h2{
+	color: #FFFFFF;
+font-size: 40px;
+font-weight: bold;
+text-align: center;
+text-transform: uppercase;
+margin: 0;
+}
+.titlecar p{
+color: #FFFFFF;
+font-size: 16px;
+text-align: center;
+margin-top: 5px;
+}
+.title p{
+color: #808080;
+font-size: 16px;
+text-align: center;
+margin-top: 5px;
+}
+.services{
+	margin-top: 50px;
+	margin-left: 100px;
+}
+.services_item{
+	width: 270px;
+	float: left;
+	text-align: center;
+}
+.services_item h3{
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+.services_item p{
+font-size: 14px;
+color: #808080;
+line-height: 1.55em;
+}
+#services{
+	padding-bottom: 130px;
+}
+#car{
+background: url(../img/fon_lenty_radiaciya_opasnost_stena_18526_1920x1080.jpg)no-repeat center top/cover;
+}
+.car{
+	margin-top: 70px;
+}
+.cars1{
+	float: left;
+	width: 400px;
+	height: 280px;
+}
+.cars2{
+	margin-left: 50px;
+	width: 400px;
+	height: 280px;
+}
+.cars3 {
+	float: left;
+	width: 400px;
+	height: 280px;
+}
+.cars4{
+	margin-left: 50px;
+	width: 400px;
+	height: 280px;
+}
+#cars{
+	padding-bottom: 130px;
+}
+
+
+footer{
+	font-size: 14px;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
