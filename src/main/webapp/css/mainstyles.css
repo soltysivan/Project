@@ -60,11 +60,11 @@ nav{
 	margin: 15px;
 }
 
-.button{
+.buttonindex{
 	background: #FFD700	;
 	color: #000000;
 	border-radius: 3px;
-	display: block;
+    display: block;
 	width: 240px;
 	padding: 20px 0;
 	margin: 0 auto;
@@ -74,6 +74,11 @@ nav{
 	font-weight: bold;
 	font-size: 18px;
 	margin-top: 100px;
+}
+.buttonindex:hover {
+	transition: all 0.5s;
+	background: rgb(244, 80, 66);;
+	color: black;
 }
 .title{
 	padding-top: 120px;

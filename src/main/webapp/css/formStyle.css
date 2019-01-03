@@ -36,19 +36,19 @@ body{
 	padding-left: 10px;
 }
 .dws-submit{
-    padding: 20px 100px;
-    margin: 5px 0 20px 0;
-    font-size: 15px;
-    color: #fff;
-    background-color:#ffb60d;
-    border-bottom: 4px solid #000000;
-    cursor: pointer;
-    border-radius: 5px;
+	padding: 20px 100px;
+	margin: 5px 0 20px 0;
+	font-size: 15px;
+	color: #fff;
+	background-color:#ffb60d;
+	border-bottom: 2px solid #FFFFFF;
+	cursor: pointer;
+	border-radius: 5px;
 }
 .dws-submitReg:hover{
     transition: all 0.5s;
-    background: #FFF;
-    color: #ff140a;
+    background: rgb(244, 80, 66);;
+    color: black;
 }
 .dws-submitReg{
 	padding: 20px 100px;
@@ -56,16 +56,16 @@ body{
 	font-size: 15px;
 	color: #fff;
 	background-color:#ffb60d;
-	border-bottom: 4px solid #000000;
+	border-bottom: 2px solid #FFFFFF;
 	cursor: pointer; 
 	border-radius: 5px;
 }
 .dws-submit:hover{
 	transition: all 0.5s;
-	background: #FFF;
-	color: #ff140a;
+	background: rgb(244, 80, 66);;
+	color: black;
 }
-a.button1 {
+.buttonreg {
 	display: inline-block;
 	color: white;
 	font-weight: 700;
@@ -74,10 +74,10 @@ a.button1 {
 	padding: .5em 2em;
 	outline: none;
 	border: 2px solid;
-	border-radius: 1px;
+	border-radius: 4px;
 	transition: 0.2s;
 }
-a.button1:hover { background: rgba(255,255,255,.2); }
-a.button1:active { background: white; }
+.buttonreg:hover { background: rgb(244, 80, 66); }
+.buttonreg:active { background: black; }
 
 

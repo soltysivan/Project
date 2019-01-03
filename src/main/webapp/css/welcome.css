@@ -25,36 +25,34 @@ table{
 
 }
 th{
-	font-size: 40px;
+	font-size: 30px;
 	padding: 20px;
 	background: #464646;
 	color: #FFFFFF;
 }
 td{
-	font-size: 25px;
+	font-size: 18px;
 	padding: 20px;
 	background: #ffb60d;
 }
-buttonwelcome{
-	margin-top: 50px;
-
+.buttonwelcome{
+	margin: 50px auto;
+    float: right;
 }
 a.buttonw1 {
-	background: #ffb302;
-	float: right;
-	margin-right: 30px;
+	background: #FFFFFF;
 	display: inline-block;
-	color: white;
+	color: black;
 	font-weight: 700;
 	text-decoration: none;
 	user-select: none;
 	padding: .5em 2em;
 	outline: none;
 	border: 2px solid;
-	border-radius: 1px;
+	border-radius: 4px;
 	transition: 0.2s;
 }
 
-a.buttonw1:hover { background: rgba(255,255,255,.2); }
+a.buttonw1:hover { background: rgb(244, 80, 66); }
 a.buttonw1:active { background: white; }
 

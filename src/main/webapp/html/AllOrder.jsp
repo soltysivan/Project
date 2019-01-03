@@ -16,7 +16,7 @@
 
 <html >
 <head>
-    <style><%@include file="/css/mainStyles.css"%></style>
+    <style><%@include file="/css/mainstyles.css"%></style>
     <style><%@include file="/css/welcome.css"%></style>
     <title>Order</title>
 </head>
@@ -46,12 +46,28 @@
 
 <%OrderRepository orderRepository = new OrderRepository(); %>
 <% ArrayList list = (ArrayList) orderRepository.getAllOrders(); %>
-        <%for (Object i: list) {%>
-<br>
-       <a class="sulka" href="/<%= i %>" > <%= i  %></>
-<br>
-       <% }%>
-    <br>
+    <table>
+
+        <tr>
+            <th>Departure</th>
+            <th>Distance</th>
+            <th>Arrival</th>
+            <th>TimeDelivery</th>
+            <th> </th>
+        </tr>
+        <% for (int i = 0;i<list.size();i++) {%>
+        <tr>
+            <%Order order = (Order) list.get(i);%>
+            <td><%=order.getDeparture()%></td>
+            <td><%=order.getDistance()%></td>
+            <td><%=order.getArrival()%></td>
+            <td><%=order.getTimeDelivary()%></td>
+            <td><a class="sulka" href="/<%= order %>" > change </a></td>
+
+        </tr>
+        <% }%>
+    </table>
+
     <br>
     <div class="buttonwelcome">
     <div >
