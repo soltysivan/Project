@@ -33,14 +33,14 @@ public class OrderRepository {
         return orders;
     }
 
-    public Order getOrderByUser_ID (long USER_ID){
+    public Order getOrderByID(long ID){
             DataSource dataSource = new DataSource();
             Order order = null;
         try (Connection connection = dataSource.getConnection();
              Statement statement = connection.createStatement();
              ResultSet resultSet = statement.executeQuery(
                      "SELECT ID, USER_ID, departure, arrival, distance, timeDelivary FROM allOrders " +
-                             "WHERE allOrders.USER_ID='" + USER_ID + "'")){
+                             "WHERE allOrders.ID='" + ID + "'")){
             while (resultSet.next()){
                 order = new Order(
                         resultSet.getLong("ID"),
@@ -55,6 +55,34 @@ public class OrderRepository {
             e.printStackTrace();
         }
         return order;
+    }
+
+    public void changOrder (Order order,Long ID){
+            DataSource dataSource = new DataSource();
+
+        try(Connection connection = dataSource.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(
+                    "UPDATE allorders SET USER_ID=?, departure=?, distance=?, arrival=?, timeDelivary=? WHERE ID="+ ID +"")) {
+            preparedStatement.setLong(1,order.getUSER_ID());
+            preparedStatement.setString(2,order.getDeparture());
+            preparedStatement.setString(3,order.getDistance());
+            preparedStatement.setString(4,order.getArrival());
+            preparedStatement.setString(5,order.getTimeDelivary());
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void deleteOrder (long id){
+            DataSource dataSource = new DataSource();
+
+        try (Connection connection = dataSource.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM allorders WHERE allorders.ID='"+ id +"'");){
+preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public void saveOrder (Order order){

@@ -15,8 +15,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-@WebServlet(name = "OrderController",urlPatterns = "/createOrder")
-public class OrderController extends HttpServlet {
+@WebServlet(name = "CreateOrderController",urlPatterns = "/createOrder")
+public class CreateOrderController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
@@ -32,7 +32,7 @@ public class OrderController extends HttpServlet {
             printWriter.write(createOrderView.getHtml());
         }
 
-        if((request.getParameter("departure"))!=null){
+        if(request.getParameter("departure")!=null){
             OrderRepository orderRepository = new OrderRepository();
             Order order = new Order();
             order.setDeparture(request.getParameter("departure"));
@@ -41,6 +41,8 @@ public class OrderController extends HttpServlet {
             order.setTimeDelivary(request.getParameter("timeDelivary"));
 
             orderRepository.saveOrder(order);
+            response.sendRedirect("/html/AllOrder.jsp");
         }
+
     }
 }

@@ -60,6 +60,7 @@
             <th>Arrival</th>
             <th>TimeDelivery</th>
             <th> </th>
+            <th> </th>
         </tr>
         <% for (int i = 0;i<list.size();i++) {%>
         <tr>
@@ -68,8 +69,8 @@
             <td><%=order.getDistance()%></td>
             <td><%=order.getArrival()%></td>
             <td><%=order.getTimeDelivary()%></td>
-            <td><a class="sulka" href="/<%= order %>" > change </a></td>
-
+            <td><a class="sulka" href="/chang?ID=<%=order.getID()%>" > Update </a></td>
+            <td><a class="sulka" href="/delete/?ID=<%=order.getID()%>" > Delete </a></td>
         </tr>
         <% }%>
     </table>

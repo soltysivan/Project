@@ -2,6 +2,7 @@ package org.truck.logistic.controller;
 
 import org.truck.logistic.dao.entities.User;
 import org.truck.logistic.dao.repository.UserRepository;
+import org.truck.logistic.formvalidator.RegisterFormValidator;
 import org.truck.logistic.view.RegistrationView;
 
 import javax.servlet.ServletException;
@@ -32,18 +33,27 @@ public class RegistrationController extends HttpServlet {
 
         printWriter.write(registrationView.getHtml());
 
-        if (request.getParameter("email")!= null){
-            UserRepository userRepository = new UserRepository();
-            User user = new User();
-            user.setUserName(request.getParameter("userName"));
-            user.setPassword(request.getParameter("password"));
-            user.setEmail(request.getParameter("email"));
-            userRepository.saveUser(user);
 
-            if (user == null){
-                printWriter.write("Pleas fill in all the fields");
+
+        if (request.getParameter("email")!= null){
+            RegisterFormValidator registerFormValidator = new RegisterFormValidator(
+                    request.getParameter("userName"),
+                    request.getParameter("password"),
+                    request.getParameter("email"));
+            if (!registerFormValidator.isFormValid()){
+                printWriter.write(registerFormValidator.getMessageError());
             }else {
-                response.sendRedirect("/login");
+                UserRepository userRepository = new UserRepository();
+                User user = new User();
+                user.setUserName(request.getParameter("userName"));
+                user.setPassword(request.getParameter("password"));
+                user.setEmail(request.getParameter("email"));
+                userRepository.saveUser(user);
+                if (user == null) {
+                    printWriter.write("Pleas fill in all the fields");
+                } else {
+                    response.sendRedirect("/login");
+                }
             }
         }
     }

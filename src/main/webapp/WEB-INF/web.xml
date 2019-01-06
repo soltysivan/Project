@@ -4,4 +4,14 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+    <servlet>
+        <servlet-name>ChangOrder</servlet-name>
+        <jsp-file>/html/ChangOrder.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ChangOrder</servlet-name>
+        <url-pattern>/chang/*</url-pattern>
+    </servlet-mapping>
 </web-app>
+

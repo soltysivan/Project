@@ -16,6 +16,8 @@ public class IndexView {
     private String welcome;
     private String createOrder;
 
+
+
     private static IndexView ourInstance = new IndexView();
 
     public static IndexView getInstance() {
@@ -37,6 +39,8 @@ public class IndexView {
         this.createOrder = createOrder;
     }
 
+
+
     public void setHtmlPath(String htmlPath) {
         this.htmlPath = htmlPath;
         this.index = getPartialHtml("index.html");
@@ -45,7 +49,6 @@ public class IndexView {
         this.registration = getPartialHtml("registration.html");
         this.welcome = getPartialHtml("welcome.html");
         this.createOrder=getPartialHtml("createOrder.html");
-
     }
 
     public String getPartialHtml (String fileName){
