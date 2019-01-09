@@ -11,12 +11,12 @@ public class UserRepository {
         DataSource dataSource = new DataSource();
         try(Connection connection = dataSource.getConnection();
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT ID, userName, password, email, role FROM user " +
-                    "WHERE user.email = '" + email + "'AND user.password = '" + password + "'");
+            ResultSet resultSet = statement.executeQuery("SELECT id, userName, password, email, role FROM users " +
+                    "WHERE users.email = '" + email + "'AND users.password = '" + password + "'");
             ) {
             while (resultSet.next()){
                 User user = new User(
-                resultSet.getLong("ID"),
+                resultSet.getLong("id"),
                 resultSet.getString("userName"),
                 resultSet.getString("password"),
                 resultSet.getString("email"),
@@ -34,7 +34,7 @@ public class UserRepository {
         DataSource dataSource = new DataSource();
 
         try(Connection connection = dataSource.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO user (userName, password, email) VALUE (?,?,?)")) {
+            PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO users (userName, password, email) VALUE (?,?,?)")) {
             preparedStatement.setString(1,user.getUserName());
             preparedStatement.setString(2,user.getPassword());
             preparedStatement.setString(3,user.getEmail());

@@ -30,7 +30,7 @@ response.setContentType("text/html;charset=UTF-8");
             response.sendRedirect("/login");
         }
         OrderRepository orderRepository = new OrderRepository();
-        orderRepository.deleteOrder(Long.parseLong(request.getParameter("ID")));
+        orderRepository.deleteOrder(Long.parseLong(request.getParameter("id")));
         response.sendRedirect("/html/AllOrder.jsp");
     }
 }

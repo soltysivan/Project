@@ -31,17 +31,17 @@ public class ChangOrderController extends HttpServlet {
         }
 
 
-//        if(request.getParameter("ID")!=null){
+//        if(request.getParameter("id")!=null){
             OrderRepository orderRepository = new OrderRepository();
             Order order = new Order();
-          // order.setID(Long.parseLong(request.getParameter("ID")));
-            order.setUSER_ID(Long.parseLong(request.getParameter("USER_ID")));
+          // order.setID(Long.parseLong(request.getParameter("id")));
+            order.setUSER_ID(user.getID());
             order.setDeparture(request.getParameter("departure"));
             order.setArrival(request.getParameter("arrival"));
             order.setDistance(request.getParameter("distance"));
             order.setTimeDelivary(request.getParameter("timeDelivary"));
 
-            orderRepository.changOrder(order, Long.valueOf(request.getParameter("ID")));
+            orderRepository.changOrder(order, Long.valueOf(request.getParameter("id")));
        // }
         response.sendRedirect("/html/AllOrder.jsp");
     }

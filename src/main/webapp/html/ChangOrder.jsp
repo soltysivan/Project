@@ -25,7 +25,7 @@
 <body class="reg">
 <div class="container">
     <div class="heading clearfix">
-        <img src="img/logo1.png" alt="SafeDelivery" class="logo">
+        <img src="logo1.png" alt="SafeDelivery" class="logo">
         <nav>
             <ul class="menu">
                 <li>
@@ -46,15 +46,15 @@
 </div>
 <div class="containerForm">
     <%OrderRepository orderRepository = new OrderRepository(); %>
-    <%Order order = orderRepository.getOrderByID(Long.parseLong(request.getParameter("ID")));%>
+    <%Order order = orderRepository.getOrderByID(Long.parseLong(request.getParameter("id")));%>
     <form action="/update" method="get">
         <img src="img/semi-clipart-cartoon-8.png">
         <h1 class="loginTitle">Chang Order</h1>
         <div class="dws-input">
-            <input type="text" value="<%=order.getID()%>" name="ID" placeholder="Enter arrival">
+            <input type="text" value="<%=order.getID()%>" name="id" placeholder="Enter arrival">
         </div>
         <div class="dws-input">
-            <input type="text" value="<%=order.getUSER_ID()%>" name="USER_ID" placeholder="Enter arrival">
+            <input type="text" value="<%=order.getUSER_ID()%>" name="user_id" placeholder="Enter arrival">
         </div>
         <div class="dws-input">
             <input type="text" value="<%=order.getArrival()%>" name="arrival" placeholder="Enter arrival">

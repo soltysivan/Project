@@ -69,8 +69,8 @@
             <td><%=order.getDistance()%></td>
             <td><%=order.getArrival()%></td>
             <td><%=order.getTimeDelivary()%></td>
-            <td><a class="sulka" href="/chang?ID=<%=order.getID()%>" > Update </a></td>
-            <td><a class="sulka" href="/delete/?ID=<%=order.getID()%>" > Delete </a></td>
+            <td><a class="sulka" href="/chang?id=<%=order.getID()%>" > Update </a></td>
+            <td><a class="sulka" href="/delete/?id=<%=order.getID()%>" > Delete </a></td>
         </tr>
         <% }%>
     </table>

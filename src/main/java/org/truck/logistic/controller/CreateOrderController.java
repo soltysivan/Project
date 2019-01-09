@@ -35,6 +35,7 @@ public class CreateOrderController extends HttpServlet {
         if(request.getParameter("departure")!=null){
             OrderRepository orderRepository = new OrderRepository();
             Order order = new Order();
+            order.setUSER_ID(user.getID());
             order.setDeparture(request.getParameter("departure"));
             order.setArrival(request.getParameter("arrival"));
             order.setDistance(request.getParameter("distance"));
